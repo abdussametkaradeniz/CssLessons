@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox</title>
+	<style>
+	
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			
+			height: 1200px;
+			
+			display: flex;
+			flex-direction: column; /* elemanlar sayfanin ortasina gelir  */
+			justify-content: space-around; /*el*/
+
+			/* justify-content: center; elemanlari yatayda siraliyor ve ortalaniyor*/
+			
+			/* justify-content: flex-start; elemanlar sola hizalanir */
+			/* justify-content: flex-end; butun elemanlar saga hizalanir */
+			/* justify-content: space-between; her eleman arasina esit bosluk birakir bu bosluklar degeri
+			bizim margin degerimizden aliyor */
+			/* justify-content: space-around; sayfa kenarlarindan x, item aralarindan 2x bosluk birakir  */
+			/* justify-content: space-evenly; her yerden esit bosluk birakiyor */
+			
+			/* align-items: stretch; dikeyde siralama ozelligi var sayilan olarak strechtir */
+			/* align-items: center;  */
+			/* align-items: flex-start; uste dogru hizalanir */
+			
+			 
+			/* align-items: baseline; hizalama alt sinirdan yapilir */
+			align-items: flex-end; /* alta dogru siralanir */
+			
+			background-color: #f2f2f2;
+			padding: 15px;
+		}
+		
+		.item {
+			background-color: chocolate;
+			padding: 30px;
+			margin: 30px;
+			color: #fff;
+			font-size: 25px;
+		}
+		
+		.i2 {
+			height: 200px;
+		}
+		
+		.i3 {
+			height: 300px;
+		}
+		
+		.i4 {
+			font-size: 60px;
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="item">item 1</div>
+		<div class="item">item 2</div>
+		<div class="item i3">item 3</div>
+		<div class="item i4">item 4</div>		
+		
+	</div>
+	
+	
+</body>
+</html>

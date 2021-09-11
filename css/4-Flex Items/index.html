@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox</title>
+	<style>
+		/* flex ve flex-grow ayni seydir. Container icersindeki alani aldigi degere gore kaplar
+		ornegin 12x lik alanda 4 itemden olusan containerda birine 2x verirsek 2x verdigimiz 12/6x x=2
+		2x=4 bulunarak 4 birim alan kaplarken diger 3 birim ise 2ser birim kaplayarak alani 12 birime tamamlar */
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {	
+			display: flex;
+			align-items: center;
+			
+			background-color: #f2f2f2;
+			padding: 15px;
+		}
+		
+		.item {
+			background-color: chocolate;
+			padding: 30px;
+			margin: 30px;
+			color: #fff;
+			font-size: 25px;
+			/*flex- grow:1 butun elemanlar icerisinde bulundugu containerin icerisinde esit deger kaplarlar*/
+
+			
+		}
+		.i1 {
+			align-self: stretch;/* alabilecegi tam yuksekligi alsin demektir */
+			order: 6; /* order degeri bunlarin listelemedeki nasil siralanacagini gosteriyor i 1 en sona gelir */
+			flex: 1;/*  */
+		}
+		
+		.i2 {
+			height: 200px;
+			order: 5;
+			/*flex-basis: 200px;  */
+			/*flex-shrink: 0; scroll bar ekletir bu sayede itemlerin kapladigi alanlar azalmaz */
+			flex: 0 0 200px; /* grow olmasin shrink 0 olsun basis 200px yani 3 ozelligi tekte verdik */
+		}
+		
+		.i3 {
+			align-self: flex-start;/* item 3 container icerisinde uste cikar */
+			order: -2;
+		}
+		
+		.i4 {
+			align-self: flex-end;/* item 4 container icersinde alta iner */
+			order: -1;
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="item i1">item 1</div>
+		<div class="item i2">item 2</div>
+		<div class="item i3">item 3</div>
+		<div class="item i4">item 4</div>		
+		
+	</div>
+	
+	
+</body>
+</html>
